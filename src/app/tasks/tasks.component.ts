@@ -7,6 +7,10 @@ import { Component, Input } from '@angular/core';
   templateUrl: './tasks.component.html',
   styleUrl: './tasks.component.css'
 })
+
+// @Input({required: true}) name! - (!) tells TS that we ENSURE that name property WILL NEVER BE 'undefined'
+// @Input() name? - (?) tells TS that we AWARE that name property CAN BE 'undefined'
+
 export class TasksComponent {
-  @Input({required: true}) name!: string;
+  @Input() name?: string;
 }

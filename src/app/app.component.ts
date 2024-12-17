@@ -19,8 +19,9 @@ export class AppComponent {
 
   selectedUserId = "u1";
 
+  // return this.users.find((user) => user.id === this.selectedUserId)! - (!) indicates that we alway are able to find user with such id;
   get selectedUser(){
-    return this.users.find((user) => user.id === this.selectedUserId)!;
+    return this.users.find((user) => user.id === this.selectedUserId);
   }
 
   onSelectedUser(id: string)  {
