@@ -2,18 +2,14 @@
 
 <main>
     <ul id="users">
-        <li>
-            <app-user 
-                [user]="users[0]" 
-                (select)="onSelectedUser($event)"
-            />
-        </li>
-        <li>
-            <app-user 
-                [user]="users[1]" 
-                (select)="onSelectedUser($event)"
-            />
-        </li>
+        @for(user of users; track user.id) {
+            <li>
+                <app-user 
+                    [user]="user" 
+                    (select)="onSelectedUser($event)"
+                />
+            </li>
+        }
     </ul>   
     
     <!-- [name]="selectedUser ? selectedUser.name : 'undefined user'" -->
