@@ -17,7 +17,7 @@ import { TasksComponent } from "./tasks/tasks.component";
 export class AppComponent {
   users = DUMMY_USERS;
 
-  selectedUserId = "u1";
+  selectedUserId?: string;
 
   // return this.users.find((user) => user.id === this.selectedUserId)! - (!) indicates that we alway are able to find user with such id;
   get selectedUser(){

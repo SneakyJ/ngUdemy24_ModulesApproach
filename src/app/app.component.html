@@ -12,10 +12,13 @@
         }
     </ul>   
     
-    <!-- [name]="selectedUser ? selectedUser.name : 'undefined user'" -->
-    <app-tasks
-        [name]="selectedUser?.name" 
-    />
-
+    @if(selectedUser){
+        <!-- [name]="selectedUser ? selectedUser.name : 'undefined user'" -->
+        <app-tasks
+            [name]="selectedUser.name" 
+        />
+    } @else {
+        <p id="fallback"> Select the user to see their tasks</p>
+    }
 </main>
 
