@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Task } from '../../models/task.model';
 
 @Component({
   selector: 'app-task',
@@ -10,12 +11,4 @@ import { Component, Input } from '@angular/core';
 export class TaskComponent {
   @Input({required: true}) task!: Task;
 
-}
-
-interface Task {
-  id: string,
-  userId: string,
-  title: string,
-  summary: string,
-  dueDate: string
 }
