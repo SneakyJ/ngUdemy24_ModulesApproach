@@ -17,6 +17,8 @@ export class NewTaskComponent {
   enteredTitle = '';
   enteredSummary = '';
   enteredDate = '';
+
+  // alternative way of service dependency injection
   private tasksService = inject(TasksService);
 
   onCancel(){
